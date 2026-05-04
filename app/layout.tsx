@@ -34,11 +34,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: site.url,
     siteName: site.name,
+    images: [{ url: "/og-cover.jpg", width: 1200, height: 630, alt: `${site.name} — ${site.tagline}` }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
+    images: ["/og-cover.jpg"],
   },
   icons: {
     icon: "/favicon.svg",

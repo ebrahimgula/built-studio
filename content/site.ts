@@ -1,8 +1,8 @@
 export const site = {
-  name: "Built",
+  name: "Built Studio",
   tagline: "We build the website. You grow the business.",
   description:
-    "Built is a small digital studio designing modern websites, payments, and growth tools for ambitious brands — from independent operators to established businesses. Fixed prices. Real support. No agency theatrics.",
+    "Built Studio is a small digital studio designing modern websites, payments, and growth tools for ambitious brands — from independent operators to established businesses. Fixed prices. Real support. No agency theatrics.",
   url: "https://built.studio",
 
   // Contact

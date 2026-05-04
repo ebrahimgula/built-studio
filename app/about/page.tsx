@@ -21,7 +21,7 @@ export default function AboutPage() {
             <div className="lg:col-span-7">
               <Reveal>
                 <SectionHeader
-                  eyebrow="About Built"
+                  eyebrow="About Built Studio"
                   title={
                     <>
                       A small team{" "}

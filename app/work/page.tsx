@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { projects, waLink } from "@/content/site";
 import { SectionHeader } from "@/components/SectionHeader";
@@ -67,11 +68,12 @@ export default function WorkPage() {
                 </div>
 
                 <div className="lg:col-span-6 relative min-h-[360px] lg:min-h-0">
-                  <Photo
+                  <Image
+                    src="/work-hawrat-thumb.jpg"
                     alt={featured.imageAlt}
-                    ratio="auto"
-                    tone="terracotta"
-                    className="absolute inset-0 rounded-none"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
               </div>

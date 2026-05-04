@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   hero,
@@ -85,12 +86,16 @@ export default function HomePage() {
             <div className="lg:col-span-5">
               <Reveal delay={140}>
                 <div className="relative">
-                  <Photo
-                    alt={hero.imageAlt}
-                    ratio="4/5"
-                    tone="terracotta"
-                    caption="Studio · in motion"
-                  />
+                  <div className="relative overflow-hidden rounded-3xl aspect-[4/5]">
+                    <Image
+                      src="/hero-main.jpg"
+                      alt={hero.imageAlt}
+                      fill
+                      className="object-cover"
+                      priority
+                      sizes="(max-width: 1024px) 100vw, 42vw"
+                    />
+                  </div>
                   <div className="absolute -bottom-6 -left-6 bg-cream border border-ink/10 rounded-2xl p-4 shadow-lg max-w-[220px]">
                     <p className="text-xs uppercase tracking-[0.18em] text-muted mb-1">
                       Recently shipped
@@ -116,7 +121,7 @@ export default function HomePage() {
                 <>
                   Two kinds of businesses.
                   <br />
-                  <span className="italic text-terracotta">One agency that gets both.</span>
+                  <span className="italic text-terracotta">One studio that gets both.</span>
                 </>
               }
               intro="We work with the brand just leaving Instagram and the restaurant ready to ditch its old WordPress site. Different packages. Same care."
@@ -127,12 +132,15 @@ export default function HomePage() {
             {audiences.map((a, i) => (
               <Reveal key={a.title} delay={i * 100}>
                 <article className="card-elevated group h-full flex flex-col">
-                  <Photo
-                    alt={a.imageAlt}
-                    ratio="16/10"
-                    tone={i === 0 ? "terracotta" : "forest"}
-                    className="mb-6"
-                  />
+                  <div className="relative overflow-hidden rounded-2xl mb-6" style={{ aspectRatio: "16/10" }}>
+                    <Image
+                      src={i === 0 ? "/audience-starter.jpg" : "/audience-business.jpg"}
+                      alt={a.imageAlt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                   <p className="eyebrow">{a.eyebrow}</p>
                   <h3 className="h-display text-3xl md:text-4xl mt-2">{a.title}</h3>
                   <p className="mt-4 text-ink/80 leading-relaxed">{a.body}</p>
@@ -246,7 +254,7 @@ export default function HomePage() {
             {howItWorks.map((s, i) => (
               <Reveal key={s.step} delay={i * 80}>
                 <div className="relative h-full">
-                  <div className="font-serif text-7xl text-terracotta/15 leading-none mb-4 group-hover:text-terracotta/30 transition-colors">
+                  <div className="font-serif text-7xl text-terracotta/15 leading-none mb-4">
                     {s.step}
                   </div>
                   <h3 className="font-serif text-2xl tracking-tightest leading-tight">
@@ -260,17 +268,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Built (pillars) */}
+      {/* Why Built Studio (pillars) */}
       <section className="section bg-sand/40 border-y border-ink/10">
         <div className="container-x">
           <div className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-5">
               <Reveal>
                 <SectionHeader
-                  eyebrow="Why Built"
+                  eyebrow="Why Built Studio"
                   title={
                     <>
-                      The agency we{" "}
+                      The studio we{" "}
                       <span className="italic text-terracotta">wished existed</span> for our friends' businesses.
                     </>
                   }
@@ -328,12 +336,24 @@ export default function HomePage() {
               <li key={p.id} className="w-[280px] md:w-[340px] shrink-0">
                 <Reveal delay={i * 60}>
                   <Link href={`/work#${p.id}`} className="block group">
-                    <Photo
-                      alt={p.imageAlt}
-                      ratio="4/5"
-                      tone={i % 2 === 0 ? "terracotta" : "forest"}
-                      caption={p.industry}
-                    />
+                    {i === 0 ? (
+                      <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "4/5" }}>
+                        <Image
+                          src="/work-hawrat-thumb.jpg"
+                          alt={p.imageAlt}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          sizes="340px"
+                        />
+                      </div>
+                    ) : (
+                      <Photo
+                        alt={p.imageAlt}
+                        ratio="4/5"
+                        tone={i % 2 === 0 ? "terracotta" : "forest"}
+                        caption={p.industry}
+                      />
+                    )}
                     <div className="mt-3.5">
                       <p className="font-serif text-2xl tracking-tightest group-hover:text-terracotta transition-colors">
                         {p.name}

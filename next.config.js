@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   images: {
-    remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
-      { protocol: "https", hostname: "hawrat.com" },
-    ],
+    // Static export requires unoptimized images (no Next.js image server).
+    unoptimized: true,
   },
 };
 
