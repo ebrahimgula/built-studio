@@ -194,6 +194,19 @@ export default function WorkPage() {
                       </ul>
                     </div>
                   </div>
+                  {"link" in p && p.link && (
+                    <div className="mt-5 pt-5 border-t border-ink/10">
+                      <a
+                        href={p.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-terracotta font-medium hover:gap-3 transition-all text-sm"
+                      >
+                        Visit live site
+                        <ArrowRight size={14} />
+                      </a>
+                    </div>
+                  )}
                 </article>
               </Reveal>
             ))}

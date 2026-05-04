@@ -336,7 +336,7 @@ export default function HomePage() {
               <li key={p.id} className="w-[280px] md:w-[340px] shrink-0">
                 <Reveal delay={i * 60}>
                   <Link href={`/work#${p.id}`} className="block group">
-                    {i === 0 ? (
+                    {p.id === "hawrat" ? (
                       <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "4/5" }}>
                         <Image
                           src="/work-hawrat-thumb.jpg"

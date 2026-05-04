@@ -343,6 +343,62 @@ export const projects = [
     imageAlt: "Hawrat editorial photography — abaya draped on a model in soft daylight",
   },
   {
+    id: "fletcher-herbals",
+    name: "Fletcher Herbals",
+    tag: "Live site",
+    industry: "Herbal haircare / beauty",
+    size: "Independent brand, direct-to-consumer",
+    location: "Australia",
+    summary:
+      "A grandmother's hair-oil recipe turned into a modern DTC brand. We built an editorial experience with parallax scroll, a botanical ingredient library, and an interactive dosage quiz — all loading under 2 seconds.",
+    challenge:
+      "The product had a genuine story worth telling — generations of herbal wisdom, a handmade recipe, real ingredients. A generic Shopify template would have killed it. The site had to feel as considered as the product itself.",
+    built: [
+      "Full-screen parallax hero with scroll-driven jar animation",
+      "Interactive botanical library — tap any ingredient to see its benefit",
+      "Dosage calculator quiz — recommends personalised usage based on hair type, scalp, and goal",
+      "Ingredient origins & brand story timeline",
+      "Haptic feedback on mobile for interactive elements",
+      "Framer Motion scroll animations throughout",
+      "Structured data for rich Google results",
+      "Deployed to Cloudflare Pages via Wrangler",
+    ],
+    transformation: [
+      "A family recipe now has a home worthy of the story behind it",
+      "Interactive ingredient library builds trust and educates without overwhelming",
+      "Dosage quiz converts browsers into confident first-time buyers",
+    ],
+    link: "https://fletcherherbals.pages.dev/",
+    imageAlt: "Glass jar of herbal hair oil surrounded by botanicals on a cream linen surface",
+  },
+  {
+    id: "newcastle-barber",
+    name: "Newcastle Barber",
+    tag: "Live site",
+    industry: "Barbershop / grooming",
+    size: "Single-location walk-in + appointment shop",
+    location: "Newcastle West, Australia",
+    summary:
+      "A local barbershop getting by on foot traffic and phone calls. We built a full marketing site with online product sales, dark/light mode, parallax scroll, and a Google Maps integration. Now it's the shop's permanent digital home.",
+    challenge:
+      "No web presence beyond a Google listing. Products like beard oils and clippers were sold only in-store. No way for customers to browse services or prices before walking in.",
+    built: [
+      "Full marketing site with hero, services, pricing, testimonials, FAQ, and location",
+      "Online product shop with cart and Stripe checkout",
+      "Dark and light mode with smooth theme switching",
+      "Parallax hero with animated scroll effects",
+      "Google Maps integration for walk-in directions",
+      "Responsive mobile-first layout",
+    ],
+    transformation: [
+      "Shop now has a permanent digital home customers can find on Google",
+      "Products available for purchase 24/7 — not just during shop hours",
+      "Professional online presence matches the quality of the cuts",
+    ],
+    link: "https://newcastle-barber.pages.dev/",
+    imageAlt: "Barbershop interior — mirrors, chairs, clippers arranged neatly",
+  },
+  {
     id: "atelier-bake",
     name: "Atelier Bake",
     industry: "Independent bakery",
