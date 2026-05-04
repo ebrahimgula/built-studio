@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FAF6F0;
+  --foreground: #1A1A1A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #C5573D;
+  color: #FAF6F0;
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .h-display {
+    @apply font-serif font-light tracking-tightest text-ink;
+    letter-spacing: -0.035em;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-cream;
+  }
+
+  .btn-primary {
+    @apply btn bg-terracotta text-cream hover:bg-terracotta-600 focus-visible:ring-terracotta;
+  }
+
+  .btn-secondary {
+    @apply btn bg-forest text-cream hover:bg-forest-600 focus-visible:ring-forest;
+  }
+
+  .btn-ghost {
+    @apply btn border border-ink/15 bg-transparent text-ink hover:border-ink/40 hover:bg-ink/5;
+  }
+
+  .btn-whatsapp {
+    @apply btn bg-[#25D366] text-white hover:bg-[#1FB957] focus-visible:ring-[#25D366];
+  }
+
+  .eyebrow {
+    @apply text-xs uppercase tracking-[0.18em] text-muted font-medium;
+  }
+
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .card {
+    @apply rounded-3xl border border-ink/10 bg-cream p-6 md:p-8 transition-all duration-300;
+  }
+
+  .card-elevated {
+    @apply card bg-white shadow-[0_2px_30px_-12px_rgba(0,0,0,0.08)] hover:shadow-[0_2px_40px_-12px_rgba(0,0,0,0.15)];
+  }
+
+  .reveal {
+    @apply opacity-0;
+    animation: fadeUp 0.7s ease-out forwards;
+  }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(16px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Texture overlay used on hero/section backgrounds */
+.grain {
+  position: relative;
+}
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.10 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.6;
+  mix-blend-mode: multiply;
+}
