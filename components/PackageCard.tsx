@@ -44,30 +44,30 @@ export function PackageCard({ pkg, expanded = false }: { pkg: Pkg; expanded?: bo
       {/* Pricing */}
       <div className="py-5 space-y-2">
         <div>
-          <div className="flex items-baseline gap-2">
+          <div className="flex items-baseline gap-2 whitespace-nowrap">
             <span className={clsx("font-serif text-3xl md:text-4xl", hl ? "text-cream" : "text-ink")}>
-              {formatTZS(pkg.setupTZS)}
+              {formatUSD(pkg.setupUSD)}
             </span>
             <span className={clsx("text-sm", hl ? "text-cream/70" : "text-muted")}>
               one-time
             </span>
+            <span className={clsx("text-xs", hl ? "text-cream/55" : "text-muted")}>
+              ({formatTZS(pkg.setupTZS)})
+            </span>
           </div>
-          <p className={clsx("text-xs mt-0.5", hl ? "text-cream/55" : "text-muted")}>
-            {formatUSD(pkg.setupUSD)}
-          </p>
         </div>
         <div>
-          <div className="flex items-baseline gap-2">
+          <div className="flex items-baseline gap-2 whitespace-nowrap">
             <span className={clsx("font-serif text-2xl", hl ? "text-terracotta-200" : "text-terracotta")}>
-              + {formatTZS(pkg.monthlyTZS)}
+              + {formatUSD(pkg.monthlyUSD)}
             </span>
             <span className={clsx("text-sm", hl ? "text-cream/70" : "text-muted")}>
               / month
             </span>
+            <span className={clsx("text-xs", hl ? "text-cream/55" : "text-muted")}>
+              ({formatTZS(pkg.monthlyTZS)})
+            </span>
           </div>
-          <p className={clsx("text-xs mt-0.5", hl ? "text-cream/55" : "text-muted")}>
-            {formatUSD(pkg.monthlyUSD)} / month
-          </p>
         </div>
       </div>
 
