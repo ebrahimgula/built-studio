@@ -340,6 +340,7 @@ export const projects = [
       "Email list became a revenue channel, not just a newsletter",
     ],
     link: "https://hawrat.com",
+    image: "/work-hawrat-thumb.webp",
     imageAlt: "Hawrat editorial photography — abaya draped on a model in soft daylight",
   },
   {
@@ -369,7 +370,8 @@ export const projects = [
       "Dosage quiz converts browsers into confident first-time buyers",
     ],
     link: "https://fletcherherbals.pages.dev/",
-    imageAlt: "Glass jar of herbal hair oil surrounded by botanicals on a cream linen surface",
+    image: "/work-fletcher.webp",
+    imageAlt: "Fletcher Herbals — green herb oil jar with botanicals and label on a wooden surface",
   },
   {
     id: "newcastle-barber",
@@ -396,99 +398,8 @@ export const projects = [
       "Professional online presence matches the quality of the cuts",
     ],
     link: "https://newcastle-barber.pages.dev/",
-    imageAlt: "Barbershop interior — mirrors, chairs, clippers arranged neatly",
-  },
-  {
-    id: "atelier-bake",
-    name: "Atelier Bake",
-    industry: "Independent bakery",
-    size: "Solo founder, ~30 orders/week",
-    location: "International",
-    summary:
-      "Home baker shipping a handful of orders a week through a WhatsApp inbox. We launched a clean ordering site with Stripe checkout. Orders went from 5/week to 30+/week within two months.",
-    challenge:
-      "Customers loved the cakes but ordering meant a back-and-forth on Instagram, then a screenshot of a bank transfer. People dropped off. Lots of orders just never happened.",
-    built: [
-      "Clean Starter site with full menu and pricing",
-      "Stripe checkout for cards and Apple Pay",
-      "Custom-cake order form with delivery date picker",
-      "WhatsApp button on every page for special requests",
-    ],
-    transformation: [
-      "Orders grew from 5/week to 30+/week in 8 weeks",
-      "No more chasing screenshots — payments arrive automatically",
-      "Founder reclaimed evenings that used to go to DMs",
-    ],
-    imageAlt: "Hands finishing a decorated cake on a clean studio counter",
-  },
-  {
-    id: "northfold",
-    name: "Northfold",
-    industry: "Fashion / textiles & ready-to-wear",
-    size: "10K+ Instagram audience",
-    location: "International",
-    summary:
-      "Instagram-led label with strong demand and no checkout. Rebuilt as a full ecommerce store with inventory tied to in-store stock. Conversion lifted, returns dropped.",
-    challenge:
-      "Beautiful product, growing audience, but every sale was a conversation. Shop-floor stock and online stock weren't connected — items got sold twice.",
-    built: [
-      "Full ecommerce with product variants and lookbook layouts",
-      "Stripe + local rails for international + domestic checkout",
-      "Inventory synced between in-store POS and online",
-      "Email flows for new collections and restocks",
-    ],
-    transformation: [
-      "Online checkout closed sales that used to die in DMs",
-      "Stock conflicts between online and in-store eliminated",
-      "Email became the brand's biggest launch channel",
-    ],
-    imageAlt: "Folded textile bolts on an editorial shelf in soft daylight",
-  },
-  {
-    id: "table-no-9",
-    name: "Table No. 9",
-    industry: "Restaurant / contemporary dining",
-    size: "60-seat venue, lunch + dinner",
-    location: "International",
-    summary:
-      "Took the printed menu online and added a reservation system. Reservations doubled in 3 months. Staff stopped chasing phone bookings during service.",
-    challenge:
-      "Old WordPress site nobody could update. Bookings via phone meant interruptions during service. Menu changes meant reprinting everything.",
-    built: [
-      "Modern site with editable digital menu (the manager updates it)",
-      "Online reservation form with table-size logic",
-      "Photo gallery built from real service shots",
-      "Google Business Profile optimisation — discoverable on Maps",
-    ],
-    transformation: [
-      "Reservations roughly doubled in the first quarter",
-      "Menu updates take 2 minutes instead of a print run",
-      "Staff focus on service instead of phone bookings",
-    ],
-    imageAlt: "Plate being finished at the pass in a contemporary restaurant kitchen",
-  },
-  {
-    id: "florence-studio",
-    name: "Florence Studio",
-    industry: "Beauty / salon services",
-    size: "3 stylists, 5-day week",
-    location: "International",
-    summary:
-      "Phone bookings became online bookings. No-shows dropped because of automated reminders. Stylists' calendars are no longer chaos.",
-    challenge:
-      "Bookings came via WhatsApp at all hours. Double-bookings happened. No-shows were costing real money.",
-    built: [
-      "Online booking system tied to each stylist's calendar",
-      "SMS and WhatsApp reminders 24h and 2h before",
-      "Service menu with prices upfront",
-      "Customer profiles so returning clients book in seconds",
-    ],
-    transformation: [
-      "No-show rate dropped sharply with automated reminders",
-      "Bookings happen overnight without anyone checking a phone",
-      "Staff stopped manually managing a paper calendar",
-    ],
-    imageAlt: "Salon styling station with morning light, brushes laid out",
+    image: "/work-newcastle.webp",
+    imageAlt: "Newcastle Barber — team in their modern barbershop at opening day",
   },
 ] as const;
 

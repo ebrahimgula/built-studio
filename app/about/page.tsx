@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { about, waLink } from "@/content/site";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Photo } from "@/components/Photo";
 import { Reveal } from "@/components/Reveal";
 import { Check, WhatsApp } from "@/components/Icons";
 
@@ -34,12 +34,16 @@ export default function AboutPage() {
             </div>
             <div className="lg:col-span-5">
               <Reveal delay={140}>
-                <Photo
-                  alt="Founder Ebrahim Gulamali at work in a sunlit studio"
-                  ratio="4/5"
-                  tone="terracotta"
-                  caption="Founder · Ebrahim Gulamali"
-                />
+                <div className="relative overflow-hidden rounded-3xl aspect-[4/5]">
+                  <Image
+                    src="/founder.webp"
+                    alt="Ebrahim Gulamali, founder of Built Studio"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                    priority
+                  />
+                </div>
               </Reveal>
             </div>
           </div>
@@ -72,12 +76,15 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-5">
               <Reveal>
-                <Photo
-                  alt={`${about.founder.name}, ${about.founder.role} of Built`}
-                  ratio="1/1"
-                  tone="forest"
-                  caption="The team · Founder portrait"
-                />
+                <div className="relative overflow-hidden rounded-3xl aspect-square">
+                  <Image
+                    src="/founder.webp"
+                    alt={`${about.founder.name}, ${about.founder.role} of Built Studio`}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                  />
+                </div>
               </Reveal>
             </div>
             <div className="lg:col-span-7">

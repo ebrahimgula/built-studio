@@ -13,7 +13,6 @@ import {
   waLink,
 } from "@/content/site";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Photo } from "@/components/Photo";
 import { Reveal } from "@/components/Reveal";
 import { PackageCard } from "@/components/PackageCard";
 import { FAQ } from "@/components/FAQ";
@@ -88,7 +87,7 @@ export default function HomePage() {
                 <div className="relative">
                   <div className="relative overflow-hidden rounded-3xl aspect-[4/5]">
                     <Image
-                      src="/hero-main.jpg"
+                      src="/hero-main.webp"
                       alt={hero.imageAlt}
                       fill
                       className="object-cover"
@@ -134,7 +133,7 @@ export default function HomePage() {
                 <article className="card-elevated group h-full flex flex-col">
                   <div className="relative overflow-hidden rounded-2xl mb-6" style={{ aspectRatio: "16/10" }}>
                     <Image
-                      src={i === 0 ? "/audience-starter.jpg" : "/audience-business.jpg"}
+                      src={i === 0 ? "/audience-starter.webp" : "/audience-business.webp"}
                       alt={a.imageAlt}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -336,24 +335,15 @@ export default function HomePage() {
               <li key={p.id} className="w-[280px] md:w-[340px] shrink-0">
                 <Reveal delay={i * 60}>
                   <Link href={`/work#${p.id}`} className="block group">
-                    {p.id === "hawrat" ? (
-                      <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "4/5" }}>
-                        <Image
-                          src="/work-hawrat-thumb.jpg"
-                          alt={p.imageAlt}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          sizes="340px"
-                        />
-                      </div>
-                    ) : (
-                      <Photo
+                    <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "4/5" }}>
+                      <Image
+                        src={p.image}
                         alt={p.imageAlt}
-                        ratio="4/5"
-                        tone={i % 2 === 0 ? "terracotta" : "forest"}
-                        caption={p.industry}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="340px"
                       />
-                    )}
+                    </div>
                     <div className="mt-3.5">
                       <p className="font-serif text-2xl tracking-tightest group-hover:text-terracotta transition-colors">
                         {p.name}

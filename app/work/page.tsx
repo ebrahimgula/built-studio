@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects, waLink } from "@/content/site";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Photo } from "@/components/Photo";
 import { Reveal } from "@/components/Reveal";
 import { ArrowRight, Check, WhatsApp } from "@/components/Icons";
 
@@ -69,7 +68,7 @@ export default function WorkPage() {
 
                 <div className="lg:col-span-6 relative min-h-[360px] lg:min-h-0">
                   <Image
-                    src="/work-hawrat-thumb.jpg"
+                    src="/work-hawrat-thumb.webp"
                     alt={featured.imageAlt}
                     fill
                     className="object-cover"
@@ -149,12 +148,15 @@ export default function WorkPage() {
                   id={p.id}
                   className="card-elevated group h-full flex flex-col scroll-mt-24"
                 >
-                  <Photo
-                    alt={p.imageAlt}
-                    ratio="16/10"
-                    tone={i % 2 === 0 ? "terracotta" : "forest"}
-                    className="mb-6"
-                  />
+                  <div className="relative overflow-hidden rounded-2xl mb-6" style={{ aspectRatio: "16/10" }}>
+                    <Image
+                      src={p.image}
+                      alt={p.imageAlt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                   <p className="eyebrow">{p.industry} · {p.location}</p>
                   <h3 className="h-display text-3xl md:text-4xl mt-2">
                     {p.name}
