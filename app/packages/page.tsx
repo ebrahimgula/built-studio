@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { packages, packageFaqs, formatUSD, waLink } from "@/content/site";
+import { packages, packageFaqs, formatTZS, waLink } from "@/content/site";
 import { SectionHeader } from "@/components/SectionHeader";
 import { PackageCard } from "@/components/PackageCard";
 import { FAQ } from "@/components/FAQ";
@@ -10,7 +10,7 @@ import { Check, WhatsApp } from "@/components/Icons";
 export const metadata: Metadata = {
   title: "Packages",
   description:
-    "Three honest packages — Starter, Business, and Pro. Fixed prices in TZS. Pick where you start.",
+    "Three honest packages — Starter, Business, and Pro. Tanzania-first pricing in TZS.",
 };
 
 const comparison = [
@@ -74,7 +74,7 @@ export default function PackagesPage() {
 
           <Reveal>
             <p className="mt-10 text-sm text-muted text-center max-w-2xl mx-auto leading-relaxed">
-              Prices in USD, with TZS shown beneath for our local clients. We invoice in USD, GBP, AUD, AED, EUR, or TZS — whichever is cleanest for you. Setup fees split 50% to start, 50% on launch (Pro can split into three).
+              Prices are shown in TZS first for local clients, with USD as a reference. We invoice in TZS, USD, GBP, AUD, AED, or EUR — whichever is cleanest for you. Setup fees split 50% to start, 50% on launch (Pro can split into three).
             </p>
           </Reveal>
         </div>
@@ -113,8 +113,7 @@ export default function PackagesPage() {
                             {pkg.name}
                           </div>
                           <div className="text-xs text-muted mt-1">
-                            {formatUSD(pkg.setupUSD)} +{" "}
-                            {formatUSD(pkg.monthlyUSD)}/mo
+                            {formatTZS(pkg.setupTZS)} + {formatTZS(pkg.monthlyTZS)}/mo
                           </div>
                         </th>
                       ))}

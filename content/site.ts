@@ -212,10 +212,10 @@ export const packages = [
     id: "starter",
     name: "Starter",
     subtitle: "Presence Package",
-    setupUSD: 1500,
-    monthlyUSD: 80,
-    setupTZS: 3500000,
-    monthlyTZS: 200000,
+    setupUSD: 350,
+    monthlyUSD: 30,
+    setupTZS: 900000,
+    monthlyTZS: 75000,
     perfectFor:
       "Independent operators, Instagram-led brands, freelance professionals — anyone who needs to look legitimate online.",
     features: [
@@ -235,10 +235,10 @@ export const packages = [
     id: "business",
     name: "Business",
     subtitle: "Operations Package",
-    setupUSD: 6000,
-    monthlyUSD: 200,
-    setupTZS: 14000000,
-    monthlyTZS: 500000,
+    setupUSD: 900,
+    monthlyUSD: 70,
+    setupTZS: 2400000,
+    monthlyTZS: 180000,
     perfectFor:
       "Restaurants, studios, established boutiques, retailers ready to run a real operation online.",
     features: [
@@ -260,10 +260,10 @@ export const packages = [
     id: "pro",
     name: "Pro",
     subtitle: "Growth Package",
-    setupUSD: 14000,
-    monthlyUSD: 600,
-    setupTZS: 32000000,
-    monthlyTZS: 1500000,
+    setupUSD: 2100,
+    monthlyUSD: 140,
+    setupTZS: 5500000,
+    monthlyTZS: 350000,
     perfectFor:
       "Established businesses ready to scale seriously — doing real revenue and ready to invest in the operating system that lets it compound.",
     features: [

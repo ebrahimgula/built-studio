@@ -46,27 +46,27 @@ export function PackageCard({ pkg, expanded = false }: { pkg: Pkg; expanded?: bo
         <div>
           <div className="flex items-baseline gap-2">
             <span className={clsx("font-serif text-3xl md:text-4xl", hl ? "text-cream" : "text-ink")}>
-              {formatUSD(pkg.setupUSD)}
+              {formatTZS(pkg.setupTZS)}
             </span>
             <span className={clsx("text-sm", hl ? "text-cream/70" : "text-muted")}>
               one-time
             </span>
           </div>
           <p className={clsx("text-xs mt-0.5", hl ? "text-cream/55" : "text-muted")}>
-            {formatTZS(pkg.setupTZS)}
+            {formatUSD(pkg.setupUSD)}
           </p>
         </div>
         <div>
           <div className="flex items-baseline gap-2">
             <span className={clsx("font-serif text-2xl", hl ? "text-terracotta-200" : "text-terracotta")}>
-              + {formatUSD(pkg.monthlyUSD)}
+              + {formatTZS(pkg.monthlyTZS)}
             </span>
             <span className={clsx("text-sm", hl ? "text-cream/70" : "text-muted")}>
               / month
             </span>
           </div>
           <p className={clsx("text-xs mt-0.5", hl ? "text-cream/55" : "text-muted")}>
-            {formatTZS(pkg.monthlyTZS)} / month
+            {formatUSD(pkg.monthlyUSD)} / month
           </p>
         </div>
       </div>
