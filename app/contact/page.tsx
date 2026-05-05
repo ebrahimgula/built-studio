@@ -127,7 +127,7 @@ export default function ContactPage() {
                           rel="noopener noreferrer"
                           className="text-muted hover:text-terracotta transition-colors"
                         >
-                          @built.studio
+                          @builtstudio_tz
                         </a>
                       </div>
                     </li>

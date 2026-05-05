@@ -9,7 +9,7 @@ export const site = {
   phone: "+61431338722",
   whatsappNumber: "61431338722", // wa.me strips the +
   email: "hello@built.studio",
-  instagram: "https://instagram.com/built.studio",
+  instagram: "https://instagram.com/builtstudio_tz",
   location: "Dar es Salaam · Working worldwide",
   responseTime: "We reply within 4 hours, every day of the week.",
 
@@ -369,7 +369,7 @@ export const projects = [
       "Interactive ingredient library builds trust and educates without overwhelming",
       "Dosage quiz converts browsers into confident first-time buyers",
     ],
-    link: "https://fletcherherbals.pages.dev/",
+    link: "https://fletcherherbals.com",
     image: "/work-fletcher.webp",
     imageAlt: "Fletcher Herbals — green herb oil jar with botanicals and label on a wooden surface",
   },

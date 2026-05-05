@@ -66,7 +66,7 @@ export function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-terracotta transition-colors"
                 >
-                  @built.studio
+                  @builtstudio_tz
                 </a>
               </li>
             </ul>
