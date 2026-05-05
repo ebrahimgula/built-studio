@@ -45,7 +45,7 @@ function CompCell({ value }: { value: boolean | string }) {
 export default function PackagesPage() {
   return (
     <>
-      <section className="pt-14 md:pt-20 pb-10 md:pb-16">
+      <section className="pt-12 md:pt-18 pb-8 md:pb-14">
         <div className="container-x">
           <Reveal>
             <SectionHeader
@@ -62,9 +62,9 @@ export default function PackagesPage() {
         </div>
       </section>
 
-      <section className="pb-16 md:pb-24">
+      <section className="pb-14 md:pb-20">
         <div className="container-x">
-          <div className="grid lg:grid-cols-3 gap-6 lg:gap-5 items-stretch">
+          <div className="grid lg:grid-cols-3 gap-5 lg:gap-5 items-stretch">
             {packages.map((pkg, i) => (
               <Reveal key={pkg.id} delay={i * 100} className="h-full">
                 <PackageCard pkg={pkg} expanded />
@@ -163,19 +163,19 @@ export default function PackagesPage() {
               }
             />
           </Reveal>
-          <div className="mt-12">
+          <div className="mt-10 md:mt-12">
             <FAQ items={packageFaqs} />
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="pb-20 md:pb-28">
+      <section className="pb-16 md:pb-24">
         <div className="container-x">
-          <div className="relative rounded-3xl bg-ink text-cream p-10 md:p-14 overflow-hidden grain">
+          <div className="relative rounded-3xl bg-ink text-cream p-7 md:p-14 overflow-hidden grain">
             <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="h-display text-cream text-4xl md:text-5xl">
+                <h2 className="h-display text-cream text-3xl md:text-5xl">
                   Not sure which one fits?
                 </h2>
                 <p className="mt-4 text-cream/75 leading-relaxed max-w-md">

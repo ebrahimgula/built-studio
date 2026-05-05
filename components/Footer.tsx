@@ -5,15 +5,15 @@ import { Instagram, WhatsApp, Mail, Pin } from "./Icons";
 export function Footer() {
   return (
     <footer className="border-t border-ink/10 bg-sand/40">
-      <div className="container-x py-16 md:py-20">
-        <div className="grid md:grid-cols-12 gap-10 md:gap-8">
+      <div className="container-x py-14 md:py-20">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-8">
           <div className="md:col-span-5">
-            <p className="font-serif text-3xl md:text-4xl tracking-tightest text-ink leading-[1.05]">
+            <p className="font-serif text-[30px] md:text-4xl tracking-tightest text-ink leading-[1.08]">
               We build the website.
               <br />
               <span className="text-terracotta">You grow the business.</span>
             </p>
-            <p className="mt-5 text-muted max-w-md leading-relaxed">
+            <p className="mt-4 md:mt-5 text-muted max-w-md leading-relaxed text-[15px] md:text-base">
               {site.description}
             </p>
             <a
@@ -71,7 +71,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-6 border-t border-ink/10 flex flex-col-reverse md:flex-row md:justify-between md:items-center gap-3 text-sm text-muted">
+        <div className="mt-10 md:mt-14 pt-5 md:pt-6 border-t border-ink/10 flex flex-col-reverse md:flex-row md:justify-between md:items-center gap-2.5 md:gap-3 text-sm text-muted">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <p className="font-serif italic">
             A small studio. Made for the world.

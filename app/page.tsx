@@ -23,8 +23,8 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="container-x pt-10 md:pt-16 pb-16 md:pb-24">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+        <div className="container-x pt-8 md:pt-14 pb-12 md:pb-20">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
             <div className="lg:col-span-7">
               <Reveal>
                 <p className="eyebrow mb-5">
@@ -34,18 +34,18 @@ export default function HomePage() {
                 </p>
               </Reveal>
               <Reveal delay={80}>
-                <h1 className="h-display text-[44px] sm:text-6xl md:text-7xl lg:text-[88px] leading-[0.95]">
+                <h1 className="h-display text-[36px] sm:text-5xl md:text-6xl lg:text-[82px] leading-[0.98]">
                   Your business deserves more than a{" "}
                   <span className="italic text-terracotta">DM inbox.</span>
                 </h1>
               </Reveal>
               <Reveal delay={160}>
-                <p className="mt-7 text-lg md:text-xl text-muted max-w-xl leading-relaxed">
+                <p className="mt-5 md:mt-7 text-base md:text-lg text-muted max-w-xl leading-relaxed">
                   {hero.sub}
                 </p>
               </Reveal>
               <Reveal delay={220}>
-                <div className="mt-9 flex flex-wrap gap-3">
+                <div className="mt-7 md:mt-9 flex flex-wrap gap-2.5 md:gap-3">
                   <Link href={hero.primaryCta.href} className="btn-primary">
                     {hero.primaryCta.label}
                     <ArrowRight size={16} />
@@ -62,7 +62,7 @@ export default function HomePage() {
                 </div>
               </Reveal>
               <Reveal delay={300}>
-                <div className="mt-10 flex items-center gap-6 text-sm text-muted">
+                <div className="mt-8 md:mt-10 flex items-center gap-4 md:gap-6 text-sm text-muted">
                   <div className="flex -space-x-2">
                     {[
                       "from-terracotta-300 to-terracotta-600",
@@ -95,7 +95,7 @@ export default function HomePage() {
                       sizes="(max-width: 1024px) 100vw, 42vw"
                     />
                   </div>
-                  <div className="absolute -bottom-6 -left-6 bg-cream border border-ink/10 rounded-2xl p-4 shadow-lg max-w-[220px]">
+                  <div className="absolute bottom-3 left-3 md:-bottom-6 md:-left-6 bg-cream border border-ink/10 rounded-2xl p-3 md:p-4 shadow-lg max-w-[200px] md:max-w-[220px]">
                     <p className="text-xs uppercase tracking-[0.18em] text-muted mb-1">
                       Recently shipped
                     </p>
@@ -127,7 +127,7 @@ export default function HomePage() {
             />
           </Reveal>
 
-          <div className="mt-14 grid md:grid-cols-2 gap-6 md:gap-8">
+          <div className="mt-10 md:mt-14 grid md:grid-cols-2 gap-5 md:gap-8">
             {audiences.map((a, i) => (
               <Reveal key={a.title} delay={i * 100}>
                 <article className="card-elevated group h-full flex flex-col">
@@ -173,7 +173,7 @@ export default function HomePage() {
             />
           </Reveal>
 
-          <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="mt-10 md:mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
             {capabilities.map((cap, i) => {
               const Icon = iconMap[cap.icon as keyof typeof iconMap];
               return (
@@ -214,7 +214,7 @@ export default function HomePage() {
             />
           </Reveal>
 
-          <div className="mt-14 grid lg:grid-cols-3 gap-6 lg:gap-5 items-stretch">
+          <div className="mt-10 md:mt-14 grid lg:grid-cols-3 gap-5 lg:gap-5 items-stretch">
             {packages.map((pkg, i) => (
               <Reveal key={pkg.id} delay={i * 100} className="h-full">
                 <PackageCard pkg={pkg} />
@@ -249,14 +249,14 @@ export default function HomePage() {
             />
           </Reveal>
 
-          <div className="mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="mt-10 md:mt-14 grid md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
             {howItWorks.map((s, i) => (
               <Reveal key={s.step} delay={i * 80}>
                 <div className="relative h-full">
-                  <div className="font-serif text-7xl text-terracotta/15 leading-none mb-4">
+                  <div className="font-serif text-6xl md:text-7xl text-terracotta/15 leading-none mb-3 md:mb-4">
                     {s.step}
                   </div>
-                  <h3 className="font-serif text-2xl tracking-tightest leading-tight">
+                  <h3 className="font-serif text-[22px] md:text-2xl tracking-tightest leading-tight">
                     {s.title}
                   </h3>
                   <p className="mt-3 text-ink/70 leading-relaxed">{s.body}</p>
@@ -270,7 +270,7 @@ export default function HomePage() {
       {/* Why Built Studio (pillars) */}
       <section className="section bg-sand/40 border-y border-ink/10">
         <div className="container-x">
-          <div className="grid lg:grid-cols-12 gap-10">
+          <div className="grid lg:grid-cols-12 gap-8 md:gap-10">
             <div className="lg:col-span-5">
               <Reveal>
                 <SectionHeader
@@ -306,7 +306,7 @@ export default function HomePage() {
       {/* Recent work */}
       <section className="section">
         <div className="container-x">
-          <div className="flex items-end justify-between flex-wrap gap-6 mb-10">
+          <div className="flex items-end justify-between flex-wrap gap-4 md:gap-6 mb-8 md:mb-10">
             <Reveal>
               <SectionHeader
                 eyebrow="Recent work"
@@ -375,12 +375,12 @@ export default function HomePage() {
             />
           </Reveal>
 
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+          <div className="mt-10 md:mt-14 grid md:grid-cols-3 gap-5 md:gap-6">
             {testimonials.map((t, i) => (
               <Reveal key={t.name} delay={i * 100}>
-                <figure className="bg-cream text-ink rounded-3xl p-7 md:p-8 h-full flex flex-col">
+                <figure className="bg-cream text-ink rounded-3xl p-6 md:p-8 h-full flex flex-col">
                   <Quote size={28} className="text-terracotta" />
-                  <blockquote className="mt-5 font-serif text-xl md:text-[22px] tracking-tightest leading-snug flex-1">
+                  <blockquote className="mt-4 md:mt-5 font-serif text-lg md:text-[22px] tracking-tightest leading-snug flex-1">
                     "{t.quote}"
                   </blockquote>
                   <figcaption className="mt-7 pt-5 border-t border-ink/10">
@@ -409,7 +409,7 @@ export default function HomePage() {
             />
           </Reveal>
 
-          <div className="mt-12">
+          <div className="mt-10 md:mt-12">
             <FAQ items={[...faqs]} />
           </div>
         </div>
@@ -418,17 +418,17 @@ export default function HomePage() {
       {/* Final CTA */}
       <section className="section">
         <div className="container-x">
-          <div className="relative rounded-3xl bg-forest text-cream p-10 md:p-16 lg:p-20 overflow-hidden grain">
+          <div className="relative rounded-3xl bg-forest text-cream p-7 md:p-14 lg:p-20 overflow-hidden grain">
             <div className="relative z-10 max-w-3xl">
               <p className="eyebrow text-cream/60 mb-5">Ready to grow?</p>
-              <h2 className="h-display text-cream text-5xl md:text-6xl lg:text-7xl leading-[0.98]">
+              <h2 className="h-display text-cream text-4xl md:text-6xl lg:text-7xl leading-[1.02]">
                 Let's build something{" "}
                 <span className="italic text-terracotta-200">real.</span>
               </h2>
-              <p className="mt-6 text-lg text-cream/80 max-w-xl leading-relaxed">
+              <p className="mt-5 md:mt-6 text-base md:text-lg text-cream/80 max-w-xl leading-relaxed">
                 Send us a WhatsApp. Tell us about your business. We'll come back with a fixed quote within a few hours — and a clear plan you can actually understand.
               </p>
-              <div className="mt-9 flex flex-wrap gap-3">
+              <div className="mt-7 md:mt-9 flex flex-wrap gap-2.5 md:gap-3">
                 <a
                   href={waLink("default")}
                   target="_blank"

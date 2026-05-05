@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="pt-14 md:pt-20 pb-16 md:pb-24">
+      <section className="pt-12 md:pt-18 pb-12 md:pb-20">
         <div className="container-x">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-end">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
             <div className="lg:col-span-7">
               <Reveal>
                 <SectionHeader
@@ -57,10 +57,10 @@ export default function AboutPage() {
             {about.story.map((s, i) => (
               <Reveal key={s.heading} delay={i * 80}>
                 <article>
-                  <h2 className="h-display text-3xl md:text-5xl leading-tight">
+                  <h2 className="h-display text-[30px] md:text-5xl leading-tight">
                     {s.heading}
                   </h2>
-                  <p className="mt-5 text-lg text-ink/80 leading-relaxed">
+                  <p className="mt-4 md:mt-5 text-base md:text-lg text-ink/80 leading-relaxed">
                     {s.body}
                   </p>
                 </article>
@@ -73,7 +73,7 @@ export default function AboutPage() {
       {/* Founder */}
       <section className="section">
         <div className="container-x">
-          <div className="grid lg:grid-cols-12 gap-10 items-center">
+          <div className="grid lg:grid-cols-12 gap-8 md:gap-10 items-center">
             <div className="lg:col-span-5">
               <Reveal>
                 <div className="relative overflow-hidden rounded-3xl aspect-square">
@@ -90,13 +90,13 @@ export default function AboutPage() {
             <div className="lg:col-span-7">
               <Reveal delay={100}>
                 <p className="eyebrow mb-4">The team</p>
-                <h2 className="h-display text-4xl md:text-5xl leading-tight">
+                <h2 className="h-display text-3xl md:text-5xl leading-tight">
                   {about.founder.name}
                 </h2>
                 <p className="mt-2 text-terracotta font-medium">
                   {about.founder.role}
                 </p>
-                <p className="mt-6 text-lg text-ink/80 leading-relaxed max-w-xl">
+                <p className="mt-5 md:mt-6 text-base md:text-lg text-ink/80 leading-relaxed max-w-xl">
                   {about.founder.bio}
                 </p>
                 <p className="mt-5 text-ink/70 leading-relaxed max-w-xl">
@@ -122,7 +122,7 @@ export default function AboutPage() {
               }
             />
           </Reveal>
-          <div className="mt-14 max-w-3xl">
+          <div className="mt-10 md:mt-14 max-w-3xl">
             <ul className="space-y-5">
               {about.promise.map((p, i) => (
                 <Reveal key={p} delay={i * 60}>
@@ -130,7 +130,7 @@ export default function AboutPage() {
                     <span className="font-serif text-2xl text-terracotta-200 leading-none mt-1">
                       0{i + 1}
                     </span>
-                    <p className="text-lg md:text-xl font-serif tracking-tightest text-cream leading-snug">
+                    <p className="text-base md:text-xl font-serif tracking-tightest text-cream leading-snug">
                       {p}
                     </p>
                   </li>
@@ -157,7 +157,7 @@ export default function AboutPage() {
             />
           </Reveal>
 
-          <div className="mt-14 grid sm:grid-cols-2 gap-5">
+          <div className="mt-10 md:mt-14 grid sm:grid-cols-2 gap-4 md:gap-5">
             {about.stack.map((tool, i) => (
               <Reveal key={tool.name} delay={i * 60}>
                 <div className="card hover:border-terracotta/30 h-full">
@@ -180,12 +180,12 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="pb-20 md:pb-28">
+      <section className="pb-16 md:pb-24">
         <div className="container-x">
-          <div className="rounded-3xl bg-forest text-cream p-10 md:p-14 grain">
+          <div className="rounded-3xl bg-forest text-cream p-7 md:p-14 grain">
             <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="h-display text-cream text-4xl md:text-5xl">
+                <h2 className="h-display text-cream text-3xl md:text-5xl">
                   Want to work together?
                 </h2>
                 <p className="mt-4 text-cream/85 leading-relaxed max-w-md">

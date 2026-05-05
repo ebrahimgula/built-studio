@@ -33,7 +33,7 @@ export function Nav() {
           : "bg-cream/0"
       )}
     >
-      <nav className="container-x flex items-center justify-between h-16 md:h-20">
+      <nav className="container-x flex items-center justify-between h-14 md:h-20">
         <Logo />
 
         <div className="hidden md:flex items-center gap-1">
@@ -72,7 +72,7 @@ export function Nav() {
         </div>
 
         <button
-          className="md:hidden p-2 -mr-2 text-ink"
+          className="md:hidden p-2 -mr-1 text-ink"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}

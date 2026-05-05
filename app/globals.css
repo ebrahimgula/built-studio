@@ -28,7 +28,7 @@ body {
 
 @layer components {
   .container-x {
-    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-12;
   }
 
   .h-display {
@@ -37,7 +37,7 @@ body {
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-cream;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-cream md:px-6 md:py-3;
   }
 
   .btn-primary {
@@ -61,11 +61,11 @@ body {
   }
 
   .section {
-    @apply py-20 md:py-28;
+    @apply py-16 md:py-24;
   }
 
   .card {
-    @apply rounded-3xl border border-ink/10 bg-cream p-6 md:p-8 transition-all duration-300;
+    @apply rounded-3xl border border-ink/10 bg-cream p-5 md:p-8 transition-all duration-300;
   }
 
   .card-elevated {

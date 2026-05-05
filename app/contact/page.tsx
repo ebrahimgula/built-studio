@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="pt-14 md:pt-20 pb-10 md:pb-12">
+      <section className="pt-12 md:pt-18 pb-8 md:pb-12">
         <div className="container-x">
           <Reveal>
             <SectionHeader
@@ -32,27 +32,27 @@ export default function ContactPage() {
       </section>
 
       {/* WhatsApp hero */}
-      <section className="pb-12 md:pb-16">
+      <section className="pb-10 md:pb-16">
         <div className="container-x">
           <Reveal>
             <a
               href={waLink("default")}
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-3xl bg-[#25D366] hover:bg-[#1FB957] transition-colors text-white p-8 md:p-12"
+              className="block rounded-3xl bg-[#25D366] hover:bg-[#1FB957] transition-colors text-white p-6 md:p-12"
             >
               <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
-                <div className="w-16 h-16 rounded-2xl bg-white/20 inline-flex items-center justify-center shrink-0">
-                  <WhatsApp size={36} />
+                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-white/20 inline-flex items-center justify-center shrink-0">
+                  <WhatsApp size={30} />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm uppercase tracking-[0.18em] opacity-80 mb-2">
                     Quickest path
                   </p>
-                  <p className="font-serif text-3xl md:text-5xl tracking-tightest leading-tight">
+                  <p className="font-serif text-[30px] md:text-5xl tracking-tightest leading-tight">
                     Chat with us on WhatsApp
                   </p>
-                  <p className="mt-3 text-lg opacity-90">
+                  <p className="mt-2.5 text-base md:text-lg opacity-90">
                     {site.responseTime}
                   </p>
                 </div>
@@ -68,13 +68,13 @@ export default function ContactPage() {
       {/* Form + sidebar */}
       <section className="section">
         <div className="container-x">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-14">
             <div className="lg:col-span-7">
               <Reveal>
-                <h2 className="h-display text-3xl md:text-4xl mb-2">
+                <h2 className="h-display text-[30px] md:text-4xl mb-2">
                   Or send a detailed enquiry
                 </h2>
-                <p className="text-muted mb-8">
+                <p className="text-muted mb-6 md:mb-8">
                   More context = a better first reply. Tell us as much as you'd like.
                 </p>
                 <ContactForm />
@@ -83,7 +83,7 @@ export default function ContactPage() {
 
             <aside className="lg:col-span-5 lg:pl-6">
               <Reveal delay={120}>
-                <div className="rounded-3xl bg-sand/40 border border-ink/10 p-7 md:p-8">
+                <div className="rounded-3xl bg-sand/40 border border-ink/10 p-6 md:p-8">
                   <p className="eyebrow mb-5">Find us</p>
                   <ul className="space-y-5 text-ink/85">
                     <li className="flex items-start gap-3">

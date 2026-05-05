@@ -18,7 +18,7 @@ export default function WorkPage() {
 
   return (
     <>
-      <section className="pt-14 md:pt-20 pb-16 md:pb-20">
+      <section className="pt-12 md:pt-18 pb-12 md:pb-18">
         <div className="container-x">
           <Reveal>
             <SectionHeader
@@ -36,20 +36,20 @@ export default function WorkPage() {
       </section>
 
       {/* Featured case study: Hawrat */}
-      <section id={featured.id} className="pb-20 md:pb-28 scroll-mt-24">
+      <section id={featured.id} className="pb-16 md:pb-24 scroll-mt-24">
         <div className="container-x">
           <Reveal>
             <div className="rounded-3xl overflow-hidden bg-ink text-cream">
               <div className="grid lg:grid-cols-12 items-stretch">
-                <div className="lg:col-span-6 p-8 md:p-12 lg:p-16 flex flex-col">
+                <div className="lg:col-span-6 p-6 md:p-10 lg:p-16 flex flex-col">
                   <p className="eyebrow text-terracotta-200">{featured.tag}</p>
-                  <h2 className="h-display text-cream text-5xl md:text-6xl mt-3">
+                  <h2 className="h-display text-cream text-4xl md:text-6xl mt-3">
                     {featured.name}
                   </h2>
                   <p className="mt-3 text-cream/70">
                     {featured.industry} · {featured.location}
                   </p>
-                  <p className="mt-6 text-lg text-cream/85 leading-relaxed">
+                  <p className="mt-5 md:mt-6 text-base md:text-lg text-cream/85 leading-relaxed">
                     {featured.summary}
                   </p>
 
@@ -66,7 +66,7 @@ export default function WorkPage() {
                   )}
                 </div>
 
-                <div className="lg:col-span-6 relative min-h-[360px] lg:min-h-0">
+                <div className="lg:col-span-6 relative min-h-[280px] sm:min-h-[340px] lg:min-h-0">
                   <Image
                     src="/work-hawrat-thumb.webp"
                     alt={featured.imageAlt}
@@ -78,14 +78,14 @@ export default function WorkPage() {
               </div>
 
               <div className="grid md:grid-cols-3 border-t border-cream/10">
-                <div className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-cream/10">
+                <div className="p-6 md:p-10 border-b md:border-b-0 md:border-r border-cream/10">
                   <p className="eyebrow text-cream/50 mb-4">The challenge</p>
                   <p className="text-cream/85 leading-relaxed">
                     {featured.challenge}
                   </p>
                 </div>
 
-                <div className="p-8 md:p-10 border-b md:border-b-0 md:border-r border-cream/10">
+                <div className="p-6 md:p-10 border-b md:border-b-0 md:border-r border-cream/10">
                   <p className="eyebrow text-cream/50 mb-4">What we built</p>
                   <ul className="space-y-2.5">
                     {featured.built.map((b) => (
@@ -103,7 +103,7 @@ export default function WorkPage() {
                   </ul>
                 </div>
 
-                <div className="p-8 md:p-10">
+                <div className="p-6 md:p-10">
                   <p className="eyebrow text-cream/50 mb-4">The transformation</p>
                   <ul className="space-y-2.5">
                     {featured.transformation.map((t) => (
@@ -141,7 +141,7 @@ export default function WorkPage() {
             />
           </Reveal>
 
-          <div className="mt-14 grid md:grid-cols-2 gap-8 lg:gap-10">
+          <div className="mt-10 md:mt-14 grid md:grid-cols-2 gap-6 lg:gap-10">
             {others.map((p, i) => (
               <Reveal key={p.id} delay={i * 80}>
                 <article
@@ -218,10 +218,10 @@ export default function WorkPage() {
 
       <section className="section">
         <div className="container-x">
-          <div className="rounded-3xl bg-terracotta text-cream p-10 md:p-14 grain">
+          <div className="rounded-3xl bg-terracotta text-cream p-7 md:p-14 grain">
             <div className="grid md:grid-cols-2 gap-8 items-center relative z-10">
               <div>
-                <h2 className="h-display text-cream text-4xl md:text-5xl">
+                <h2 className="h-display text-cream text-3xl md:text-5xl">
                   Could be your business next.
                 </h2>
                 <p className="mt-4 text-cream/85 leading-relaxed max-w-md">

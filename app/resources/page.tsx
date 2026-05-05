@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function ResourcesPage() {
   return (
     <>
-      <section className="pt-14 md:pt-20 pb-10 md:pb-16">
+      <section className="pt-12 md:pt-18 pb-8 md:pb-14">
         <div className="container-x">
           <Reveal>
             <SectionHeader
@@ -32,9 +32,9 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section className="pb-20 md:pb-28">
+      <section className="pb-16 md:pb-24">
         <div className="container-x">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             {resources.map((r, i) => (
               <Reveal key={r.slug} delay={i * 60}>
                 <article className="group h-full flex flex-col">
@@ -46,7 +46,7 @@ export default function ResourcesPage() {
                   />
                   <div className="mt-5 flex flex-col flex-1">
                     <p className="eyebrow">Coming soon</p>
-                    <h3 className="font-serif text-2xl tracking-tightest mt-2 leading-snug group-hover:text-terracotta transition-colors">
+                    <h3 className="font-serif text-[22px] md:text-2xl tracking-tightest mt-2 leading-snug group-hover:text-terracotta transition-colors">
                       {r.title}
                     </h3>
                     <p className="mt-3 text-ink/75 leading-relaxed flex-1">
@@ -69,12 +69,12 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section className="pb-20 md:pb-28">
+      <section className="pb-16 md:pb-24">
         <div className="container-x">
-          <div className="rounded-3xl bg-ink text-cream p-10 md:p-14">
+          <div className="rounded-3xl bg-ink text-cream p-7 md:p-14">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="h-display text-cream text-4xl md:text-5xl">
+                <h2 className="h-display text-cream text-3xl md:text-5xl">
                   Want a question answered?
                 </h2>
                 <p className="mt-4 text-cream/75 leading-relaxed max-w-md">
