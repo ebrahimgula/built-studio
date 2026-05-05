@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { site, nav, waLink } from "@/content/site";
 import { Instagram, WhatsApp, Mail, Pin } from "./Icons";
+import { Logo } from "./Logo";
 
 export function Footer() {
   return (
@@ -8,6 +9,7 @@ export function Footer() {
       <div className="container-x py-14 md:py-20">
         <div className="grid md:grid-cols-12 gap-8 md:gap-8">
           <div className="md:col-span-5">
+            <Logo className="mb-4" />
             <p className="font-serif text-[30px] md:text-4xl tracking-tightest text-ink leading-[1.08]">
               We build the website.
               <br />
