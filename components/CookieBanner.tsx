@@ -24,9 +24,14 @@ export function CookieBanner() {
   return (
     <div className="fixed bottom-5 left-5 right-5 md:right-auto md:max-w-md z-40">
       <div className="rounded-2xl bg-ink text-cream px-5 py-4 shadow-2xl flex items-start gap-4">
-        <p className="text-sm leading-relaxed">
-          We use a small number of cookies to keep the site fast and understand what's working. Nothing personal, nothing sold.
-        </p>
+        <div className="flex-1">
+          <p className="text-sm leading-relaxed">
+            We use a small number of cookies to keep the site fast and understand what's working. Nothing personal, nothing sold.
+          </p>
+          <a href="/privacy" className="text-xs text-terracotta-200 hover:text-terracotta-100 transition-colors inline-block mt-2">
+            Privacy policy →
+          </a>
+        </div>
         <button
           onClick={dismiss}
           className="shrink-0 text-xs uppercase tracking-wider px-3 py-2 rounded-full bg-terracotta hover:bg-terracotta-600 transition-colors"

@@ -150,21 +150,24 @@ export const pillars = [
 export const testimonials = [
   {
     quote:
-      "Before Built, I was screenshotting bank transfers and chasing customers in DMs. Now orders come in while I sleep. It paid for itself in the first month.",
-    name: "A. Mansoor",
-    role: "Founder, independent fashion brand",
+      "Before Built, I was screenshotting bank transfers and chasing customers on DMs. Every order was a conversation. Now it just runs — inventory, payments, email. It paid for itself in the first month.",
+    name: "Hawrat Design Studio",
+    role: "Modest fashion brand · International",
+    link: "https://hawrat.com",
   },
   {
     quote:
-      "We had an old site nobody could update. Built rebuilt the whole thing and trained our team. Reservations doubled in three months.",
-    name: "Y. K.",
-    role: "Operator, restaurant group",
+      "Ebrahim understood the product before he understood the brief. The site feels like the oil — considered, warm, unhurried. Our customers actually read it.",
+    name: "Fletcher Herbals",
+    role: "Natural haircare brand · Australia",
+    link: "https://fletcherherbals.pages.dev/",
   },
   {
     quote:
-      "What I love is they actually pick up the phone. Last week I needed a product added before a launch — done in an hour.",
-    name: "L. P.",
-    role: "Founder, beauty studio",
+      "We went from no web presence to bookings, product sales, and a Google listing in under three weeks. The team picked up the WhatsApp at 9pm to fix a last thing before launch.",
+    name: "Newcastle Barber",
+    role: "Barbershop · Newcastle, Australia",
+    link: "https://newcastle-barber.pages.dev/",
   },
 ] as const;
 
@@ -465,6 +468,57 @@ export const resources = [
     excerpt:
       "If you're answering the same questions in DMs every day, you're already running a website — just badly.",
     readTime: "4 min read",
+    category: "Getting online",
+    body: [
+      {
+        type: "p" as const,
+        text: "Here's a thought that might sting a little: if you're answering the same questions in DMs every day — 'What are your prices?', 'Do you deliver?', 'What sizes do you have?' — you're already running a website. It's just a slow, manual, exhausting one.",
+      },
+      {
+        type: "h2" as const,
+        text: "1. You're answering the same DM questions on repeat",
+      },
+      {
+        type: "p" as const,
+        text: "Count how many times this week you typed out your prices, your opening hours, or your delivery policy. If it's more than five, you have a FAQ problem. A website solves this permanently. Put the answers on a page, link it in your bio, and watch the question volume drop.",
+      },
+      {
+        type: "h2" as const,
+        text: "2. Customers can't find you without a direct referral",
+      },
+      {
+        type: "p" as const,
+        text: "Instagram is a closed garden. If someone searches Google for 'abaya brand Tanzania' or 'barber near me Newcastle', Instagram doesn't show up in those results — your website does. If your business only exists inside a social platform, you're invisible to everyone who hasn't already heard of you.",
+      },
+      {
+        type: "h2" as const,
+        text: "3. You're chasing payments instead of receiving them",
+      },
+      {
+        type: "p" as const,
+        text: "Screenshots of bank transfers, following up on M-Pesa confirmations, customers who say they'll pay 'later' — these are symptoms of a business without a payment system. A website with a checkout takes money before it ships the order. That's not just convenient, it's how you get paid on time, every time.",
+      },
+      {
+        type: "h2" as const,
+        text: "4. You feel embarrassed to send people somewhere",
+      },
+      {
+        type: "p" as const,
+        text: "When someone asks 'where can I find out more about your business?', what do you send them? If the answer is a link to an Instagram account or a WhatsApp number, something is missing. Your website is the one place you own completely — no algorithm decides who sees it, no platform can deactivate it.",
+      },
+      {
+        type: "h2" as const,
+        text: "5. You're ready to grow but there's nothing to grow into",
+      },
+      {
+        type: "p" as const,
+        text: "A website isn't just a brochure — it's infrastructure. It's where you run email marketing, where you track what products are selling, where you take bookings without being awake. If you're serious about the business beyond this year, a website is the foundation everything else is built on.",
+      },
+      {
+        type: "p" as const,
+        text: "If you ticked three or more of these, you're not just ready — you're overdue. A Starter site takes two weeks and costs less than a month's rent. Send us a message on WhatsApp and we'll tell you exactly what makes sense for where you are.",
+      },
+    ],
   },
   {
     slug: "mobile-money-online-tanzania",
@@ -472,6 +526,57 @@ export const resources = [
     excerpt:
       "A plain-English guide to Pesapal, Flutterwave, and what actually works for small businesses.",
     readTime: "6 min read",
+    category: "Payments",
+    body: [
+      {
+        type: "p" as const,
+        text: "If you're selling in Tanzania, mobile money isn't optional — it's how most of your customers expect to pay. M-Pesa alone handles billions in transactions every month. The question isn't whether to accept it, it's how to wire it into your website without becoming a developer.",
+      },
+      {
+        type: "h2" as const,
+        text: "The options that actually work",
+      },
+      {
+        type: "p" as const,
+        text: "There are three payment processors worth knowing: Pesapal, Flutterwave, and DPO Group. Each has a different sweet spot.",
+      },
+      {
+        type: "h2" as const,
+        text: "Pesapal — best for East Africa-first businesses",
+      },
+      {
+        type: "p" as const,
+        text: "Pesapal is built for Kenya, Uganda, and Tanzania. It accepts M-Pesa, Tigo Pesa, Airtel Money, and cards. Settlement is fast (usually 1–2 business days) and their support understands local banking. For a Tanzanian business selling locally, Pesapal is usually the right starting point. The main limitation: it's harder to use if you have significant international customers paying in foreign currencies.",
+      },
+      {
+        type: "h2" as const,
+        text: "Flutterwave — best for cross-border and international sales",
+      },
+      {
+        type: "p" as const,
+        text: "Flutterwave covers 30+ African countries and accepts cards, bank transfers, and mobile money across most of them. If you sell to customers in the UK, UAE, or across East Africa, Flutterwave handles the currency complexity better than Pesapal. Settlement comes in USD or your local currency depending on how you configure it.",
+      },
+      {
+        type: "h2" as const,
+        text: "Stripe and PayPal — for international-only customers",
+      },
+      {
+        type: "p" as const,
+        text: "If your customers are primarily outside Africa paying by card or PayPal, Stripe is the cleanest developer experience available. But Stripe doesn't natively support M-Pesa or local bank transfers, so it's a complement, not a replacement, for local payment rails.",
+      },
+      {
+        type: "h2" as const,
+        text: "What to actually do",
+      },
+      {
+        type: "p" as const,
+        text: "For most small Tanzanian businesses: set up Pesapal for local customers, and if you have meaningful international volume, add Stripe or Flutterwave alongside it. Both can live on the same checkout page. The goal is to never lose a sale because the customer's preferred payment method wasn't available.",
+      },
+      {
+        type: "p" as const,
+        text: "We handle all of this setup as part of our Business and Pro packages — including testing, tax configuration, and making sure payouts land where they should. If you want to talk through what makes sense for your specific business, send us a WhatsApp.",
+      },
+    ],
   },
   {
     slug: "instagram-alone-costing-customers",
@@ -479,6 +584,49 @@ export const resources = [
     excerpt:
       "Three customer behaviours that kill sales when DMs are your only checkout.",
     readTime: "5 min read",
+    category: "Getting online",
+    body: [
+      {
+        type: "p" as const,
+        text: "Instagram is an extraordinary tool for discovery. People find you, fall in love with your product, and want to buy. Then you lose them. Here's what's actually happening — and why it happens quietly enough that most sellers don't notice until they look at the numbers.",
+      },
+      {
+        type: "h2" as const,
+        text: "Behaviour 1: The late-night browser",
+      },
+      {
+        type: "p" as const,
+        text: "Your customer is scrolling at 11pm, sees your product, wants it. They go to DM you — but it's late, you're asleep, and they don't want to wait for a reply. They move on. By morning, the impulse is gone. With a website and a checkout, that 11pm browser becomes a confirmed order before breakfast.",
+      },
+      {
+        type: "h2" as const,
+        text: "Behaviour 2: The researcher",
+      },
+      {
+        type: "p" as const,
+        text: "Some customers don't buy on impulse. They compare, think, come back. When their research path takes them to Google — 'best herbal hair oil Australia' or 'custom cakes Dar es Salaam' — Instagram doesn't appear. Your competitors with websites do. The researcher, who was already interested in exactly what you sell, never finds you.",
+      },
+      {
+        type: "h2" as const,
+        text: "Behaviour 3: The friction-averse buyer",
+      },
+      {
+        type: "p" as const,
+        text: "DMs require effort: typing a message, waiting for a response, negotiating payment, waiting for bank details, sending proof. Every step is friction. Research consistently shows that checkout abandonment spikes with each additional step. A customer who would have happily paid with a saved card in 30 seconds will not chase a DM conversation for 20 minutes — even if they want the product.",
+      },
+      {
+        type: "h2" as const,
+        text: "The invisible cost",
+      },
+      {
+        type: "p" as const,
+        text: "The insidious thing about these lost sales is that they're invisible. Nobody sends you a message saying 'I wanted to buy but didn't'. Your DM inbox just stays quiet, and you assume there wasn't demand. In reality, the demand was there — the friction ate it.",
+      },
+      {
+        type: "p" as const,
+        text: "A website doesn't replace Instagram. It converts the audience Instagram builds. The Instagram account gets people interested. The website closes the sale.",
+      },
+    ],
   },
   {
     slug: "what-business-website-costs-2026",
@@ -486,6 +634,65 @@ export const resources = [
     excerpt:
       "Honest numbers, what to skip, and where to spend if you only have one budget.",
     readTime: "7 min read",
+    category: "Pricing",
+    body: [
+      {
+        type: "p" as const,
+        text: "This is the question we get most on WhatsApp. And because we publish our prices openly, we can give you a straight answer — and some context for why the range is so wide.",
+      },
+      {
+        type: "h2" as const,
+        text: "The real price range",
+      },
+      {
+        type: "p" as const,
+        text: "A basic business website in 2026 costs between $350 and $15,000 depending on what you actually need. That's a wide range, and it's honest. Here's how to figure out where you fall.",
+      },
+      {
+        type: "h2" as const,
+        text: "$350–$800: A clean presence site",
+      },
+      {
+        type: "p" as const,
+        text: "Three to five pages — Home, About, Services, Contact. Mobile-first design. A WhatsApp button. Contact form. Custom domain. This is what most solo operators and Instagram-led brands need first. It makes you look legitimate, it answers the basic questions, and it means you exist on Google. This is our Starter package.",
+      },
+      {
+        type: "h2" as const,
+        text: "$2,000–$8,000: A full business site",
+      },
+      {
+        type: "p" as const,
+        text: "A product catalogue or menu. Online checkout. Booking system. SEO. Email marketing automation. This is for businesses that have outgrown DMs and need their website to actually work — taking orders, managing stock, running campaigns. This is our Business package range.",
+      },
+      {
+        type: "h2" as const,
+        text: "$10,000+: Full operations infrastructure",
+      },
+      {
+        type: "p" as const,
+        text: "Multi-location inventory. Accounting integrations. Custom automation. Advanced analytics. If you're running a real operation — a restaurant group, a fashion brand with wholesale and retail, a business with staff who need different access levels — this is the territory. Our Pro package covers this.",
+      },
+      {
+        type: "h2" as const,
+        text: "What to skip",
+      },
+      {
+        type: "p" as const,
+        text: "Skip the features you won't use. A home baker doesn't need multi-location inventory. A solo consultant doesn't need a product catalogue. Paying for complexity you don't need is money wasted and a site that's harder to manage. Start with what solves the problem in front of you, not what might be useful in three years.",
+      },
+      {
+        type: "h2" as const,
+        text: "Where to spend if you only have one budget",
+      },
+      {
+        type: "p" as const,
+        text: "Design. Not decoration — clarity. A site that loads fast, explains what you do in ten seconds, and makes it easy to buy or contact you will outperform a beautiful site that's slow and confusing every time. After design, spend on a real payment system. A checkout that works is worth more than a blog nobody reads.",
+      },
+      {
+        type: "p" as const,
+        text: "Our prices are listed openly on the packages page. If you're not sure which tier makes sense for you, send us a WhatsApp — we'll tell you honestly, even if the answer is that you don't need us yet.",
+      },
+    ],
   },
   {
     slug: "swahili-vs-english-content",
@@ -493,6 +700,45 @@ export const resources = [
     excerpt:
       "How to decide based on your customers, not on assumptions about who's reading.",
     readTime: "4 min read",
+    category: "Content",
+    body: [
+      {
+        type: "p" as const,
+        text: "This comes up in almost every project we do in Tanzania. The assumption most people start with is wrong: it's not about which language sounds more professional, it's about which language your customer thinks in when they're about to spend money.",
+      },
+      {
+        type: "h2" as const,
+        text: "Start with your customer, not your preference",
+      },
+      {
+        type: "p" as const,
+        text: "Ask yourself: when my best customer is talking to their friends about what they bought, what language are they using? That's your answer. If you're serving Dar es Salaam households buying groceries or household goods, Swahili isn't just appropriate — it's warmer, more trusted, more direct. If you're a B2B service dealing with corporate clients, government, or international buyers, English is expected.",
+      },
+      {
+        type: "h2" as const,
+        text: "The case for bilingual",
+      },
+      {
+        type: "p" as const,
+        text: "Most Tanzanian businesses serve a mixed audience. A restaurant might have local walk-in customers and international tourists. A fashion brand might have Dar es Salaam customers and diaspora buyers in the UK or UAE. For these businesses, building a bilingual site — with a simple language toggle — is the right answer. It costs slightly more to write content twice, but the conversion lift from speaking to each customer in their language is worth it.",
+      },
+      {
+        type: "h2" as const,
+        text: "What not to do",
+      },
+      {
+        type: "p" as const,
+        text: "Don't mix languages mid-sentence. Don't write in English and assume a Swahili-speaking customer will struggle through it because 'they'll manage'. Don't use Google Translate for important pages — the output is recognisable as machine translation to anyone reading it, and it reads as unprofessional in both languages.",
+      },
+      {
+        type: "h2" as const,
+        text: "Our default recommendation",
+      },
+      {
+        type: "p" as const,
+        text: "For most of our Tanzanian clients: English as the primary language with key selling points mirrored in Swahili. Navigation and CTAs in both. Pricing in both TZS and USD (or the currency your international audience uses). This covers the widest audience without needing to maintain two full versions of every page.",
+      },
+    ],
   },
   {
     slug: "checklist-launch-online-shop",
@@ -500,5 +746,48 @@ export const resources = [
     excerpt:
       "What to test, photograph, and write before you turn checkout on.",
     readTime: "5 min read",
+    category: "Ecommerce",
+    body: [
+      {
+        type: "p" as const,
+        text: "Launching without this checklist is how you end up with customers trying to buy a product that's out of stock, paying with a card that's not connected to anything, and emailing you about an error message at 2am. We've seen all of it. Use this.",
+      },
+      {
+        type: "h2" as const,
+        text: "Products",
+      },
+      {
+        type: "p" as const,
+        text: "1. Every product has at least one photo that was taken in daylight, not under fluorescent lights. 2. Every product has a price in your primary currency (and TZS if you're selling locally). 3. Stock quantities are set — nothing is showing as available that you don't have. 4. Product descriptions answer the questions a customer would ask: size, material, weight, how it's used.",
+      },
+      {
+        type: "h2" as const,
+        text: "Checkout",
+      },
+      {
+        type: "p" as const,
+        text: "5. You've made a real test purchase — card declined should not be the first time a customer sees your checkout. 6. The confirmation email is set up and goes to your own inbox first. 7. Delivery cost is calculated correctly (flat rate, by weight, or free above a threshold — whichever you chose). 8. Your refund and return policy is written and linked in the footer.",
+      },
+      {
+        type: "h2" as const,
+        text: "Trust",
+      },
+      {
+        type: "p" as const,
+        text: "9. Your About page exists and has a real name or face on it. Anonymous shops convert worse — customers want to know who they're buying from. 10. Your WhatsApp number or email is visible without anyone having to search for it. 11. You have at least one testimonial or review showing. It doesn't have to be elaborate — even a screenshot quote from a happy customer works.",
+      },
+      {
+        type: "h2" as const,
+        text: "Technical",
+      },
+      {
+        type: "p" as const,
+        text: "12. You've checked the site on your phone, on a different browser, and on someone else's phone. What you see on your laptop is not what your customer sees on a 2-year-old Android. If it looks broken on one device, fix it before you tell anyone the shop is open.",
+      },
+      {
+        type: "p" as const,
+        text: "If you're working with us, we run through this list before every launch — and we won't hand a site over until everything on it is green. If you're doing it yourself, this is the minimum. Good luck.",
+      },
+    ],
   },
 ] as const;

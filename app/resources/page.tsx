@@ -2,14 +2,21 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { resources, waLink } from "@/content/site";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Photo } from "@/components/Photo";
 import { Reveal } from "@/components/Reveal";
 import { ArrowRight, WhatsApp } from "@/components/Icons";
 
 export const metadata: Metadata = {
   title: "Resources",
   description:
-    "Plain-English guides for Tanzanian business owners — getting online, mobile money, what a website actually costs.",
+    "Plain-English guides for business owners — getting online, mobile money, what a website actually costs.",
+};
+
+const categoryColour: Record<string, string> = {
+  "Getting online": "bg-terracotta/10 text-terracotta",
+  Payments: "bg-forest/10 text-forest",
+  Pricing: "bg-sand border border-ink/10 text-ink",
+  Content: "bg-terracotta/10 text-terracotta",
+  Ecommerce: "bg-forest/10 text-forest",
 };
 
 export default function ResourcesPage() {
@@ -26,7 +33,7 @@ export default function ResourcesPage() {
                   <span className="italic text-terracotta">for real owners.</span>
                 </>
               }
-              intro="No jargon, no fluff, no AI-generated SEO bait. Short reads written for people running actual businesses in Tanzania."
+              intro="No jargon, no fluff. Short reads written for people running actual businesses."
             />
           </Reveal>
         </div>
@@ -37,35 +44,30 @@ export default function ResourcesPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             {resources.map((r, i) => (
               <Reveal key={r.slug} delay={i * 60}>
-                <article className="group h-full flex flex-col">
-                  <Photo
-                    alt={`Cover for ${r.title}`}
-                    ratio="4/3"
-                    tone={i % 3 === 0 ? "terracotta" : i % 3 === 1 ? "forest" : "sand"}
-                    caption={`Article · ${r.readTime}`}
-                  />
-                  <div className="mt-5 flex flex-col flex-1">
-                    <p className="eyebrow">Coming soon</p>
-                    <h3 className="font-serif text-[22px] md:text-2xl tracking-tightest mt-2 leading-snug group-hover:text-terracotta transition-colors">
+                <Link href={`/resources/${r.slug}`} className="group block h-full">
+                  <article className="h-full flex flex-col card hover:border-terracotta/30 transition-colors">
+                    <span
+                      className={`self-start text-[11px] uppercase tracking-[0.18em] font-medium px-2.5 py-1 rounded-full ${categoryColour[r.category] ?? "bg-sand text-ink"}`}
+                    >
+                      {r.category}
+                    </span>
+                    <h3 className="font-serif text-[22px] md:text-2xl tracking-tightest mt-4 leading-snug group-hover:text-terracotta transition-colors flex-1">
                       {r.title}
                     </h3>
-                    <p className="mt-3 text-ink/75 leading-relaxed flex-1">
+                    <p className="mt-3 text-ink/70 leading-relaxed text-sm">
                       {r.excerpt}
                     </p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm text-muted">
-                      {r.readTime}
-                    </span>
-                  </div>
-                </article>
+                    <div className="mt-5 flex items-center justify-between">
+                      <span className="text-xs text-muted">{r.readTime}</span>
+                      <span className="inline-flex items-center gap-1 text-sm text-terracotta font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                        Read <ArrowRight size={14} />
+                      </span>
+                    </div>
+                  </article>
+                </Link>
               </Reveal>
             ))}
           </div>
-
-          <Reveal>
-            <p className="mt-14 text-center text-muted max-w-xl mx-auto leading-relaxed">
-              Articles are being written. If you have a question you'd like covered, send it to us on WhatsApp — chances are we'll write that one next.
-            </p>
-          </Reveal>
         </div>
       </section>
 

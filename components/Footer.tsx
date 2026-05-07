@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { site, nav, waLink } from "@/content/site";
-import { Instagram, WhatsApp, Mail, Pin } from "./Icons";
+import { Instagram, WhatsApp, Mail, Pin, Phone } from "./Icons";
 import { Logo } from "./Logo";
 
 export function Footer() {
@@ -51,6 +51,12 @@ export function Footer() {
               <li className="flex items-start gap-2.5">
                 <Pin size={18} className="mt-0.5 text-terracotta shrink-0" />
                 <span>{site.location}</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <Phone size={18} className="mt-0.5 text-terracotta shrink-0" />
+                <a href={`tel:${site.phone}`} className="hover:text-terracotta transition-colors">
+                  {site.phone}
+                </a>
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail size={18} className="mt-0.5 text-terracotta shrink-0" />

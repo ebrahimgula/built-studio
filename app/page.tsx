@@ -1,6 +1,8 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  site,
   hero,
   audiences,
   capabilities,
@@ -17,6 +19,11 @@ import { Reveal } from "@/components/Reveal";
 import { PackageCard } from "@/components/PackageCard";
 import { FAQ } from "@/components/FAQ";
 import { ArrowRight, Quote, WhatsApp, iconMap } from "@/components/Icons";
+
+export const metadata: Metadata = {
+  title: "Built Studio",
+  description: site.description,
+};
 
 export default function HomePage() {
   return (
@@ -329,10 +336,10 @@ export default function HomePage() {
             </Reveal>
           </div>
         </div>
-        <div className="overflow-x-auto -mx-5 sm:-mx-8 lg:-mx-12 px-5 sm:px-8 lg:px-12 scrollbar-none">
-          <ul className="flex gap-5 min-w-max pr-5 sm:pr-8 lg:pr-12">
+        <div className="container-x">
+          <ul className="grid sm:grid-cols-3 gap-6">
             {projects.map((p, i) => (
-              <li key={p.id} className="w-[280px] md:w-[340px] shrink-0">
+              <li key={p.id}>
                 <Reveal delay={i * 60}>
                   <Link href={`/work#${p.id}`} className="block group">
                     <div className="relative overflow-hidden rounded-3xl" style={{ aspectRatio: "4/5" }}>
@@ -384,7 +391,14 @@ export default function HomePage() {
                     "{t.quote}"
                   </blockquote>
                   <figcaption className="mt-7 pt-5 border-t border-ink/10">
-                    <p className="font-medium">{t.name}</p>
+                    <a
+                      href={t.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium hover:text-terracotta transition-colors"
+                    >
+                      {t.name}
+                    </a>
                     <p className="text-sm text-muted">{t.role}</p>
                   </figcaption>
                 </figure>

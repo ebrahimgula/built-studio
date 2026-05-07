@@ -68,7 +68,7 @@ export default function ContactPage() {
       {/* Form + sidebar */}
       <section className="section">
         <div className="container-x">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-14">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-start">
             <div className="lg:col-span-7">
               <Reveal>
                 <h2 className="h-display text-[30px] md:text-4xl mb-2">
@@ -81,7 +81,7 @@ export default function ContactPage() {
               </Reveal>
             </div>
 
-            <aside className="lg:col-span-5 lg:pl-6">
+            <aside className="lg:col-span-5 order-first lg:order-last lg:pl-6">
               <Reveal delay={120}>
                 <div className="rounded-3xl bg-sand/40 border border-ink/10 p-6 md:p-8">
                   <p className="eyebrow mb-5">Find us</p>
@@ -140,15 +140,6 @@ export default function ContactPage() {
                     </p>
                     <p className="mt-2 text-sm text-muted">
                       Business hours: Mon–Fri, 9am–6pm EAT.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-6 rounded-3xl overflow-hidden border border-ink/10 aspect-[4/3] relative bg-gradient-to-br from-forest-200 via-terracotta-100 to-sand">
-                  <span className="grain absolute inset-0" aria-hidden />
-                  <div className="absolute inset-0 flex items-end p-6">
-                    <p className="text-xs uppercase tracking-[0.18em] text-ink/70 font-medium">
-                      Map · Dar es Salaam (we'll plug in a real Google Map here)
                     </p>
                   </div>
                 </div>

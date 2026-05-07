@@ -11,9 +11,9 @@ const needs = [
 ] as const;
 
 const budgets = [
-  "Starter (~350K + 40K/mo)",
-  "Business (~1.5M + 100K/mo)",
-  "Pro (3.5M + 300K/mo)",
+  "Starter (~900K + 75K/mo)",
+  "Business (~2.4M + 180K/mo)",
+  "Pro (5.5M + 350K/mo)",
   "Not sure yet",
 ] as const;
 
